@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+<body>  
+    
+    <h1>|| Online Currency Exchange ||</h1>
+<div class="container">
+<div class="col-md-0 col-md-offset-4">
+<div ng-app="myApp" ng-controller="currencyCtrl"> 
+<form class="form-horizontal" name="myForm" novalidate>
+<div class="form-group">
+  <br/> 
+  <div id="box">
+  <label class="h2 text-center">Enter Currency Amount: </label>
+  <br/>
+      <br/>
+    <table>
+        <tr>
+        <td>
+            <input id="fromAmount" ng-init="1" class="form-control" type="number"  autofocus ng-change="convertCurrency()" min="0" ng-model="fromCurrency"></td>
+            <td><select id="from" class="form-control" ng-change="convertCurrency()" ng-model="fromDDl">
+                
+                <option value="AUD" ng-selected="true">Australian Dollar(AUD)</option>
+                <option value="AED">Arab Emirates Dirham(AED)</option>
+                <option value="BGN">Bulgarian Lev(BGN)</option>
+                <option value="BDT">Bangladesh Taka(BDT)</option>
+                <option value="EUR">Belgium(EUR)</option>
+                <option value="GBP">British Pound(GBP)</option>
+                <option value="CAD">Canadian Dollar(CAD)</option>      
+                <option value="DKK">Danish Krone(DKK)</option>
+                <option value="EUR">France Euro(EUR)</option>
+                <option value="HKD">Hong Kong Dollar(HKD)</option>
+                <option value="ILS">Israeli New Shekel(ILS)</option>
+                <option value="INR">Indian Rupee(INR)</option>
+                <option value="JPY">Japanese Yen(JPY)</option>
+                <option value="KWD">Kuwaiti Dinar(KWD)</option>
+                <option value="NZD">New Zealand Dollar(NZD)</option>
+                <option value="OMR">Omani Rial(OMR)</option>
+                <option value="PKR">Pakistan Rupee(PKR)</option>
+                 <option value="QAR">Qatari Rial(QAR)</option>
+                <option value="RUB">Russian Ruble(RUB)</option>
+                 <option value="SGD">Singapore Dollar(SGD)</option>
+                <option value="ZAR">South African Rand(ZAR)</option>
+                 <option value="CHF">Swiss Franc(CHF)</option>
+                <option value="THB">Thai Baht(THB)</option>
+                <option value="USD">US Dollar(USD)</option>
+                <option value="YER">Yemeni Rial(YER)</option>            
+                </select></td>
+        </tr>      
+        <tr>
+        <td><input id="toAmount" type="text" ng-change="convertCurrency()" disabled class="form-control" ng-model="toCurrency"></td>
+            <td><select id="to" ng-change="convertCurrency()" ng-model="toDDL" class="form-control">
+            
+                <option value="AUD">Australian Dollar(AUD)</option>
+                <option value="AED" ng-selected="true">Arab Emirates Dirham(AED)</option>
+                <option value="BGN">Bulgarian Lev(BGN)</option>
+                <option value="BDT">Bangladesh Taka(BDT)</option>
+                <option value="EUR">Belgium(EUR)</option>
+                <option value="GBP">British Pound(GBP)</option>
+                <option value="CAD">Canadian Dollar(CAD)</option>      
+                <option value="DKK">Danish Krone(DKK)</option>
+                <option value="EUR">France Euro(EUR)</option>
+                <option value="HKD">Hong Kong Dollar(HKD)</option>
+                <option value="ILS">Israeli New Shekel(ILS)</option>
+                <option value="INR">Indian Rupee(INR)</option>
+                <option value="JPY">Japanese Yen(JPY)</option>
+                <option value="KWD">Kuwaiti Dinar(KWD)</option>
+                <option value="NZD">New Zealand Dollar(NZD)</option>
+                <option value="OMR">Omani Rial(OMR)</option>
+                <option value="PKR">Pakistan Rupee(PKR)</option>
+                 <option value="QAR">Qatari Rial(QAR)</option>
+                <option value="RUB">Russian Ruble(RUB)</option>
+                 <option value="SGD">Singapore Dollar(SGD)</option>
+                <option value="ZAR">South African Rand(ZAR)</option>
+                 <option value="CHF">Swiss Franc(CHF)</option>
+                <option value="THB">Thai Baht(THB)</option>
+                <option value="USD">US Dollar(USD)</option>
+                <option value="YER">Yemeni Rial(YER)</option> 
+                </select></td>
+</tr>
+        </table> 
+      
+    </div>
+    </div>
+    </form>
+    <br/>
+    <br/>
+   <h2><i>Find world's top 20 Currency here:</i></h2>
+<br/>
+<h3>Search:- <input type="text" ng-model="test"></h3>
+<br/>
+<ul>
+  <li ng-repeat="x in names | filter:test">
+    {{ x }}
+  </li>
+</ul>
+    
+    </div>
+    </div>
+        </div>
+       
+	<footer> Designed by:_ Biren Patel</footer>
+	
+</body>
+</html>
