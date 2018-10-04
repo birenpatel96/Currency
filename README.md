@@ -1,2 +1,2 @@
 # Currency
-Excahnge Rate Website
+Exchange Rate Website
